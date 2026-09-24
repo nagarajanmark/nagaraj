@@ -1,0 +1,137 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-montserrat), "Montserrat", sans-serif;
+  --font-serif: var(--font-montserrat), "Montserrat", sans-serif;
+  --font-mono: var(--font-montserrat), "Montserrat", monospace;
+}
+
+@layer base {
+  :root {
+    --font-montserrat: "Montserrat", sans-serif;
+    --font-sans: var(--font-montserrat), "Montserrat", sans-serif;
+    --font-serif: var(--font-montserrat), "Montserrat", sans-serif;
+    --font-mono: var(--font-montserrat), "Montserrat", monospace;
+    --bg-primary: #FFFFFF;
+    --bg-secondary: #FFFFFF;
+    --bg-card: #FFFFFF;
+    --text-primary: #111111;
+    --border-subtle: rgba(17, 17, 17, 0.08);
+    --border-strong: rgba(17, 17, 17, 0.15);
+    --accent-electric: #1D4ED8;
+    --accent-lavender: #3B82F6;
+    --accent-blue: #2563EB;
+    --accent-navy: #0A2558;
+  }
+
+  *, *::before, *::after {
+    font-family: var(--font-montserrat), "Montserrat", sans-serif !important;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: #FFFFFF;
+    color: #111111;
+    font-family: var(--font-montserrat), "Montserrat", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: #FFFFFF;
+    color: #111111;
+    font-family: var(--font-montserrat), "Montserrat", sans-serif;
+    overflow-x: clip;
+    selection-background-color: #1D4ED8;
+    selection-color: #FFFFFF;
+  }
+
+  ::selection {
+    background-color: #1D4ED8;
+    color: #FFFFFF;
+  }
+}
+
+/* Custom Utilities & Keyframes */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-8px) scale(1.02);
+  }
+}
+
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(0.9);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+.animate-marquee-fast {
+  display: flex;
+  width: max-content;
+  animation: marquee 20s linear infinite;
+}
+
+.animate-marquee-reverse {
+  display: flex;
+  width: max-content;
+  animation: marquee-reverse 30s linear infinite;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FFFFFF;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(17, 17, 17, 0.2);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #1D4ED8;
+}
