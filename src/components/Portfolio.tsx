@@ -1,9 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Layers, Layout, Server, Database } from "lucide-react";
 
 export default function Portfolio() {
   return (
@@ -11,13 +10,17 @@ export default function Portfolio() {
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Top Header Row */}
         <div className="flex flex-col md:flex-row md:items-start justify-between gap-8 mb-16 sm:mb-20">
-          {/* Left Column: Tilted Accent, "Projects" Title & "Hire Me" Button */}
+          {/* Left Column: Tilted Accent, "Full Stack Projects" Title & "Hire Me" Button */}
           <div className="flex flex-col items-start gap-6">
             <div className="relative">
               {/* Tilted Blue Accent Bar */}
               <div className="absolute -top-3 left-0 w-16 sm:w-20 h-2.5 bg-gradient-to-r from-[#2563EB] to-[#3B82F6] rounded-full -rotate-6 shadow-sm" />
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#1D4ED8]/10 text-[#1D4ED8] text-xs font-mono font-bold uppercase tracking-wider mb-2">
+                <span className="w-2 h-2 rounded-full bg-[#1D4ED8] animate-pulse" />
+                Featured Portfolio
+              </div>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-[#111111] leading-none pt-1">
-                Projects
+                Full Stack Projects
               </h2>
             </div>
 
@@ -33,7 +36,7 @@ export default function Portfolio() {
           {/* Right Column: Clean Subtitle */}
           <div className="max-w-md lg:max-w-lg pt-1">
             <p className="text-base sm:text-lg text-[#111111]/75 leading-relaxed font-normal">
-              Explore my selected projects to discover my design style, architectural engineering, and full-stack capabilities.
+              Full-stack web applications combining responsive React and Next.js frontend interfaces, scalable Node.js backend APIs, and optimized databases.
             </p>
           </div>
         </div>
@@ -48,7 +51,7 @@ export default function Portfolio() {
             {/* Main Rich Theme Blue Banner with Angled Typography */}
             <div className="w-full flex-1 bg-gradient-to-r from-[#0A2558] via-[#1D4ED8] to-[#2563EB] flex items-center justify-center shadow-xl relative">
               <span className="font-black text-4xl sm:text-6xl md:text-7xl lg:text-[6.5rem] tracking-tight text-[#FFFFFF] uppercase select-none drop-shadow-md font-sans whitespace-nowrap">
-                FEATURED CLIENT WEBSITES
+                FEATURED FULL STACK WEBSITES
               </span>
             </div>
 
@@ -59,7 +62,7 @@ export default function Portfolio() {
           {/* 3 Floating 3D Overlapping Perspective Mockup Cards with Real Screenshots */}
           <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 pt-6 pb-8 max-w-6xl mx-auto items-stretch">
             {/* Card 1: The Wheels Turbo Cafe */}
-            <motion.div
+            <motion.article
               initial={{ opacity: 0, y: 40, rotate: -8 }}
               whileInView={{ opacity: 1, y: 0, rotate: -6 }}
               viewport={{ once: true }}
@@ -75,14 +78,14 @@ export default function Portfolio() {
                     <div className="w-2.5 h-2.5 rounded-full bg-[#10B981]" />
                     <span className="ml-1.5 font-mono font-bold text-white text-[11px] truncate">wheelsturbocafe.com</span>
                   </div>
-                  <span className="text-[9px] px-2 py-0.5 rounded bg-[#EA580C] text-white font-bold shrink-0 uppercase tracking-wider">CAFE // RACING</span>
+                  <span className="text-[9px] px-2 py-0.5 rounded bg-[#EA580C] text-white font-bold shrink-0 uppercase tracking-wider">FULL STACK APP</span>
                 </div>
 
                 {/* Screenshot Visual */}
                 <div className="relative flex-1 w-full overflow-hidden bg-[#050B14]">
                   <Image
-                    src="/projects/wheels-turbo-cafe.webp"
-                    alt="The Wheels Turbo Cafe"
+                    src="/projects/the-wheels-turbo-cafe-full-stack-app.webp"
+                    alt="The Wheels Turbo Cafe Full Stack Web Application developed by Nagarajan"
                     fill
                     className="object-cover object-top group-hover:scale-105 transition-transform duration-700"
                     sizes="(max-width: 768px) 100vw, 33vw"
@@ -93,13 +96,13 @@ export default function Portfolio() {
                 {/* Bottom Card Footer */}
                 <div className="px-3.5 py-2.5 bg-[#060D1E] flex items-center justify-between text-[11px] text-white/80 border-t border-white/10 font-mono">
                   <span className="truncate font-semibold text-white">THE WHEELS TURBO CAFE</span>
-                  <span className="text-[#F97316] font-bold shrink-0">RS PURAM, CBE</span>
+                  <span className="text-[#F97316] font-bold shrink-0">NEXT.JS • NODE.JS</span>
                 </div>
               </div>
-            </motion.div>
+            </motion.article>
 
             {/* Card 2: Sarvilinga Builders & Structures (Center Spotlight) */}
-            <motion.div
+            <motion.article
               initial={{ opacity: 0, y: 30, rotate: -8 }}
               whileInView={{ opacity: 1, y: 0, rotate: -6 }}
               viewport={{ once: true }}
@@ -115,14 +118,14 @@ export default function Portfolio() {
                     <div className="w-2.5 h-2.5 rounded-full bg-[#10B981]" />
                     <span className="ml-1.5 font-mono font-bold text-white text-[11px] truncate">sarvilingabuilders.com</span>
                   </div>
-                  <span className="text-[9px] px-2 py-0.5 rounded bg-[#DC2626] text-white font-bold shrink-0 uppercase tracking-wider">ENGINEERING</span>
+                  <span className="text-[9px] px-2 py-0.5 rounded bg-[#DC2626] text-white font-bold shrink-0 uppercase tracking-wider">FULL STACK PORTAL</span>
                 </div>
 
                 {/* Screenshot Visual */}
                 <div className="relative flex-1 w-full overflow-hidden bg-[#050B14]">
                   <Image
-                    src="/projects/sarvilinga-builders.webp"
-                    alt="Sarvilinga Builders & Structures"
+                    src="/projects/sarvilinga-builders-full-stack-portal.webp"
+                    alt="Sarvilinga Builders Full Stack Construction Web Application by Nagarajan"
                     fill
                     className="object-cover object-top group-hover:scale-105 transition-transform duration-700"
                     sizes="(max-width: 768px) 100vw, 33vw"
@@ -133,13 +136,13 @@ export default function Portfolio() {
                 {/* Bottom Card Footer */}
                 <div className="px-3.5 py-2.5 bg-[#060D1E] flex items-center justify-between text-[11px] text-white/80 border-t border-white/10 font-mono">
                   <span className="truncate font-semibold text-white">SARVILINGA BUILDERS</span>
-                  <span className="text-[#38BDF8] font-bold shrink-0">COIMBATORE, TN</span>
+                  <span className="text-[#38BDF8] font-bold shrink-0">NEXT.JS • POSTGRES</span>
                 </div>
               </div>
-            </motion.div>
+            </motion.article>
 
             {/* Card 3: Niyozenix Dental & Orthodontics */}
-            <motion.div
+            <motion.article
               initial={{ opacity: 0, y: 40, rotate: -8 }}
               whileInView={{ opacity: 1, y: 0, rotate: -6 }}
               viewport={{ once: true }}
@@ -155,14 +158,14 @@ export default function Portfolio() {
                     <div className="w-2.5 h-2.5 rounded-full bg-[#10B981]" />
                     <span className="ml-1.5 font-mono font-bold text-white text-[11px] truncate">niyozenix.com</span>
                   </div>
-                  <span className="text-[9px] px-2 py-0.5 rounded bg-[#4F46E5] text-white font-bold shrink-0 uppercase tracking-wider">HEALTHCARE</span>
+                  <span className="text-[9px] px-2 py-0.5 rounded bg-[#4F46E5] text-white font-bold shrink-0 uppercase tracking-wider">HEALTHCARE APP</span>
                 </div>
 
                 {/* Screenshot Visual */}
                 <div className="relative flex-1 w-full overflow-hidden bg-[#050B14]">
                   <Image
-                    src="/projects/niyozenix-dental.webp"
-                    alt="Niyozenix Dental & Orthodontics"
+                    src="/projects/niyozenix-dental-full-stack-healthcare.webp"
+                    alt="Niyozenix Dental Full Stack Healthcare Web Application by Nagarajan"
                     fill
                     className="object-cover object-top group-hover:scale-105 transition-transform duration-700"
                     sizes="(max-width: 768px) 100vw, 33vw"
@@ -173,17 +176,17 @@ export default function Portfolio() {
                 {/* Bottom Card Footer */}
                 <div className="px-3.5 py-2.5 bg-[#060D1E] flex items-center justify-between text-[11px] text-white/80 border-t border-white/10 font-mono">
                   <span className="truncate font-semibold text-white">NIYOZENIX DENTAL</span>
-                  <span className="text-[#818CF8] font-bold shrink-0">PONDICHERRY</span>
+                  <span className="text-[#818CF8] font-bold shrink-0">REACT • MONGODB</span>
                 </div>
               </div>
-            </motion.div>
+            </motion.article>
           </div>
 
           {/* Bottom Right Details CTA */}
           <div className="relative z-10 flex items-center justify-end pt-4">
             <div className="flex flex-col items-end gap-1 text-right">
               <span className="text-sm sm:text-base font-bold text-[#2563EB] tracking-wide">
-                Hospitality • Architecture • Healthcare
+                Full Stack • Frontend • Backend APIs
               </span>
               <a
                 href="#contact"

@@ -3,7 +3,6 @@ import Hero from "@/components/Hero";
 import TechStackMarquee from "@/components/TechStackMarquee";
 import Portfolio from "@/components/Portfolio";
 import Services from "@/components/Services";
-import QuoteSection from "@/components/QuoteSection";
 import OrbitSection from "@/components/OrbitSection";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import FAQ from "@/components/FAQ";
@@ -18,7 +17,6 @@ export default function Home() {
       <TechStackMarquee />
       <Portfolio />
       <Services />
-      <QuoteSection />
       <WhyChooseUs />
       <FAQ />
       <OrbitSection />

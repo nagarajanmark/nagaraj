@@ -7,39 +7,51 @@ export interface FAQItem {
 
 export const faqData: FAQItem[] = [
   {
+    id: "specialization",
+    question: "What does Nagarajan specialize in?",
+    answer: "Nagarajan specializes in Full Stack Web Development, engineering responsive frontend user interfaces, scalable backend systems, REST and GraphQL APIs, and database architectures using modern JavaScript technologies including React.js, Next.js, Node.js, and TypeScript.",
+    category: "Specialization"
+  },
+  {
+    id: "full-stack-role",
+    question: "Does Nagarajan work as a Full Stack Developer?",
+    answer: "Yes. Nagarajan operates as a dedicated Full Stack Developer managing the complete engineering lifecycle—from interactive UI/UX components and client state management to server-side business logic, database design, and cloud deployments.",
+    category: "Role"
+  },
+  {
+    id: "frontend-development",
+    question: "Does Nagarajan develop frontend applications?",
+    answer: "Yes. Nagarajan builds modern, responsive, accessible, and high-performance frontend interfaces using React.js, Next.js, TypeScript, Tailwind CSS, and Framer Motion, with a strong focus on Core Web Vitals and fluid user experience.",
+    category: "Frontend"
+  },
+  {
+    id: "backend-nodejs",
+    question: "Does Nagarajan develop Node.js backends?",
+    answer: "Yes. Nagarajan develops scalable backend architectures, microservices, and server-side applications with Node.js and Express.js, integrating secure authentication (JWT/OAuth), relational and NoSQL databases, and third-party APIs.",
+    category: "Backend"
+  },
+  {
+    id: "end-to-end-apps",
+    question: "Can Nagarajan build complete full-stack applications?",
+    answer: "Yes. Nagarajan builds end-to-end web applications from scratch, connecting frontend interfaces, secure backend APIs, optimized databases (PostgreSQL, MongoDB, MySQL, Supabase), and production deployment pipelines.",
+    category: "Full Stack"
+  },
+  {
     id: "tech-stack",
-    question: "What is your primary full stack technology stack?",
-    answer: "My core stack centers around TypeScript, Next.js (App Router), React, Node.js, Express/NestJS, PostgreSQL, Prisma/Drizzle ORM, Tailwind CSS, and Redis. For cloud infrastructure and DevOps, I use Docker, GitHub Actions, AWS, and Vercel.",
-    category: "Technical"
+    question: "What technologies does Nagarajan use?",
+    answer: "Nagarajan's primary stack includes React.js, Next.js, TypeScript, JavaScript, Node.js, Express.js, PostgreSQL, MongoDB, MySQL, Supabase, Redis, Tailwind CSS, Docker, and Git for modern web application engineering.",
+    category: "Technologies"
   },
   {
-    id: "full-stack-ownership",
-    question: "Do you handle both frontend and backend development?",
-    answer: "Yes, 100%. I handle the entire development lifecycle: from relational database modeling, REST/GraphQL API construction, and server-side logic to pixel-perfect responsive UI engineering, state management, and production cloud deployment.",
-    category: "Services"
+    id: "rest-apis",
+    question: "Does Nagarajan build REST APIs?",
+    answer: "Yes. Nagarajan designs, documents, and implements secure, high-throughput RESTful and GraphQL APIs with robust validation, rate limiting, token authentication, and optimized database query execution.",
+    category: "APIs"
   },
   {
-    id: "timeline",
-    question: "How long does a typical full-stack web project take?",
-    answer: "A production-ready MVP or customized web application typically takes between 4 to 8 weeks depending on complexity, third-party integrations, and database schemas. I work in fast weekly sprints with continuous staging deployments so you test features as they are built.",
-    category: "Process"
-  },
-  {
-    id: "pricing",
-    question: "How do you structure project pricing?",
-    answer: "I offer both milestone-based fixed project pricing and dedicated monthly engineering retainers for startups needing ongoing senior full-stack development. All pricing is transparent with clear sprint deliverables and zero hidden fees.",
-    category: "Pricing"
-  },
-  {
-    id: "code-quality",
-    question: "How do you ensure code quality, security, and performance?",
-    answer: "Every application is built with strict TypeScript type-safety, automated testing, SQL injection prevention, JWT/OAuth secure authentication, and Core Web Vitals optimization to guarantee sub-second load times and 100/100 Lighthouse scores.",
-    category: "Technical"
-  },
-  {
-    id: "getting-started",
-    question: "How do we get started working together?",
-    answer: "You can start by submitting your project requirements via the contact form or scheduling a 30-minute discovery call. We'll analyze your technical architecture, define the scope and timeline, and kick off sprint one immediately.",
-    category: "Process"
+    id: "existing-apps",
+    question: "Can Nagarajan work on existing web applications?",
+    answer: "Yes. Nagarajan can refactor, optimize, and scale existing web codebases—modernizing frontend performance, migrating to Next.js or TypeScript, improving backend API throughput, and adding new full-stack features.",
+    category: "Engineering"
   }
 ];

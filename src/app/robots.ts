@@ -5,8 +5,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: "/private/",
     },
-    sitemap: "https://Nagaraj.framer.website/sitemap.xml",
+    sitemap: "https://nagaraj.co.in/sitemap.xml",
   };
 }

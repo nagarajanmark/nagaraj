@@ -9,18 +9,18 @@ export default function Services() {
       <div className="w-full overflow-hidden">
         <CinematicHero
           brandName="SERVICES"
-          tagline1="Full-Stack solutions that"
-          tagline2="turn vision into software."
-          cardHeading="Full-Stack Engineering Excellence"
+          tagline1="Frontend & Backend Engineering"
+          tagline2="Scalable Full-Stack Solutions."
+          cardHeading="Full Stack Engineering Services"
           cardDescription={
             <>
-              Delivering end-to-end full-stack web applications, scalable cloud microservices, reactive UI/UX, and robust database architectures tailored for high-growth businesses.
+              Delivering end-to-end full-stack web applications, scalable Node.js backend APIs, reactive React and Next.js user interfaces, and robust database architectures.
             </>
           }
           metricValue={99}
           metricLabel="% Performance Score"
-          ctaHeading="Ready to engineer your next product?"
-          ctaDescription="Explore our complete range of specialized development services, technical proficiencies, and enterprise solutions."
+          ctaHeading="Ready to engineer your next web application?"
+          ctaDescription="Explore specialized frontend, backend, and full-stack engineering services tailored for high performance and scalability."
         />
       </div>
     </section>

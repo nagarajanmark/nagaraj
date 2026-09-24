@@ -19,15 +19,15 @@ export default function FAQ() {
           <div className="lg:col-span-4 flex flex-col gap-4 sm:gap-6 static lg:sticky lg:top-32">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#1D4ED8]/10 text-[#1D4ED8] text-xs font-mono font-bold uppercase tracking-wider w-max border border-[#1D4ED8]/15">
               <span className="w-2 h-2 rounded-full bg-[#1D4ED8] animate-pulse" />
-              [ COMMON QUESTIONS ]
+              Full Stack FAQs
             </div>
 
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-[#111111] leading-tight">
-              Frequently asked questions.
+              Frequently Asked Questions
             </h2>
 
             <p className="text-sm sm:text-base text-[#111111]/70 leading-relaxed">
-              Everything you need to know about working with us, project scope, pricing structures, and collaboration expectations.
+              Common questions about Nagarajan&apos;s full-stack development expertise, frontend capabilities, backend architectures, APIs, and project collaboration.
             </p>
 
             <div className="pt-1">
@@ -36,7 +36,7 @@ export default function FAQ() {
                 className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-[#1D4ED8] hover:text-[#3B82F6] transition-colors"
               >
                 <HelpCircle className="w-4 h-4 shrink-0" />
-                <span>Have a different question? Email Nagarajan direct</span>
+                <span>Have a project question? Email Nagarajan directly</span>
               </a>
             </div>
           </div>
@@ -55,9 +55,9 @@ export default function FAQ() {
                     className="w-full p-4 sm:p-6 text-left flex items-center justify-between gap-4 focus:outline-none cursor-pointer"
                     aria-expanded={isOpen}
                   >
-                    <span className="text-sm sm:text-base text-[#111111] font-bold pr-2 leading-snug">
+                    <h3 className="text-sm sm:text-base text-[#111111] font-bold pr-2 leading-snug">
                       {faq.question}
-                    </span>
+                    </h3>
                     <span className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#1D4ED8] text-[#FFFFFF] flex items-center justify-center shrink-0 font-bold shadow-sm transition-transform duration-200">
                       {isOpen ? (
                         <Minus className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[3]" />

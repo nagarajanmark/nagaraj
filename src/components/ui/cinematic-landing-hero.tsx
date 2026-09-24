@@ -315,19 +315,19 @@ export function CinematicHero({
 
       {/* BACKGROUND LAYER: Hero Texts */}
       <div className="hero-text-wrapper absolute z-10 flex flex-col items-center justify-center text-center w-screen px-4 will-change-transform transform-style-3d">
-        <h1 className="text-track gsap-reveal text-3d-matte text-5xl md:text-7xl lg:text-[6rem] font-bold tracking-tight mb-2">
+        <h2 className="text-track gsap-reveal text-3d-matte text-5xl md:text-7xl lg:text-[6rem] font-bold tracking-tight mb-2">
           {tagline1}
-        </h1>
-        <h1 className="text-days gsap-reveal text-silver-matte text-5xl md:text-7xl lg:text-[6rem] font-extrabold tracking-tighter">
+        </h2>
+        <h2 className="text-days gsap-reveal text-silver-matte text-5xl md:text-7xl lg:text-[6rem] font-extrabold tracking-tighter">
           {tagline2}
-        </h1>
+        </h2>
       </div>
 
       {/* BACKGROUND LAYER 2: Tactile CTA Buttons */}
       <div className="cta-wrapper absolute z-10 flex flex-col items-center justify-center text-center w-screen px-4 gsap-reveal pointer-events-auto will-change-transform">
-        <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight text-silver-matte">
+        <h3 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight text-silver-matte">
           {ctaHeading}
-        </h2>
+        </h3>
         <p className="text-muted-foreground text-lg md:text-xl mb-12 max-w-xl mx-auto font-light leading-relaxed">
           {ctaDescription}
         </p>
@@ -485,7 +485,7 @@ export function CinematicHero({
               </div>
 
               <h3 className="text-white text-xl sm:text-2xl md:text-3xl font-extrabold mb-3 tracking-tight">
-                {cardHeading || "Full-Stack Solutions"}
+                {cardHeading || "Full-Stack Services"}
               </h3>
 
               {/* Stack of Glass Effect Service Cards */}
@@ -497,14 +497,14 @@ export function CinematicHero({
                   </div>
                   <div className="flex-1 min-w-0">
                     <h4 className="text-white text-sm font-bold tracking-tight group-hover/card:text-blue-200 transition-colors">
-                      Full-Stack Web Development
+                      Frontend Development
                     </h4>
                     <p className="text-blue-100/70 text-xs truncate">
-                      Next.js 16, React 19 & TypeScript
+                      React.js, Next.js &amp; TypeScript UI
                     </p>
                   </div>
                   <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-200 border border-blue-400/20">
-                    SSR
+                    UI
                   </span>
                 </div>
 
@@ -515,10 +515,10 @@ export function CinematicHero({
                   </div>
                   <div className="flex-1 min-w-0">
                     <h4 className="text-white text-sm font-bold tracking-tight group-hover/card:text-blue-200 transition-colors">
-                      Backend & API Systems
+                      Backend Development
                     </h4>
                     <p className="text-blue-100/70 text-xs truncate">
-                      Node.js, PostgreSQL & REST/GraphQL
+                      Node.js, Express.js &amp; REST APIs
                     </p>
                   </div>
                   <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-200 border border-blue-400/20">
@@ -533,14 +533,14 @@ export function CinematicHero({
                   </div>
                   <div className="flex-1 min-w-0">
                     <h4 className="text-white text-sm font-bold tracking-tight group-hover/card:text-blue-200 transition-colors">
-                      Cloud & Database Scale
+                      Full Stack Web Development
                     </h4>
                     <p className="text-blue-100/70 text-xs truncate">
-                      Docker, Redis & 100/100 Lighthouse
+                      End-to-End Apps, DB &amp; Deployment
                     </p>
                   </div>
                   <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-400/20">
-                    99.9%
+                    FULL
                   </span>
                 </div>
               </div>

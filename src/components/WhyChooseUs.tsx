@@ -1,32 +1,32 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Terminal, ShieldCheck, Zap, Layers, Sparkles, ArrowUpRight } from "lucide-react";
+import { Layers, Layout, Server, ShieldCheck } from "lucide-react";
 
 const differentiators = [
   {
     number: "01",
-    icon: Terminal,
-    title: "Full-Stack System Mastery",
-    description: "End-to-end expertise spanning PostgreSQL & MongoDB databases, high-throughput Node.js microservices, and reactive Next.js interfaces.",
+    icon: Layers,
+    title: "Full-Stack Expertise",
+    description: "End-to-end development across frontend, backend, APIs and databases.",
   },
   {
     number: "02",
-    icon: ShieldCheck,
-    title: "Clean, Maintainable Architecture",
-    description: "Strict TypeScript type-safety, modular component design, and zero-debt database schemas built for long-term maintainability.",
+    icon: Layout,
+    title: "Modern Frontend Engineering",
+    description: "Responsive and high-performance interfaces using React.js, Next.js and TypeScript.",
   },
   {
     number: "03",
-    icon: Zap,
-    title: "High-Velocity Engineering",
-    description: "Production-ready features shipped in rapid weekly sprints with automated CI/CD pipelines, robust unit tests, and zero bureaucracy.",
+    icon: Server,
+    title: "Scalable Backend Development",
+    description: "Node.js APIs, authentication, database integrations and backend architecture.",
   },
   {
     number: "04",
-    icon: Layers,
-    title: "Direct Senior Engineering",
-    description: "Work directly with a senior full-stack engineer who owns technical execution, architectural decisions, and production launch.",
+    icon: ShieldCheck,
+    title: "Production-Ready Applications",
+    description: "Complete web applications engineered for performance, scalability and maintainability.",
   },
 ];
 
@@ -43,14 +43,14 @@ export default function WhyChooseUs() {
           <div className="flex flex-col gap-4 max-w-2xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#1D4ED8]/10 text-[#1D4ED8] text-xs font-mono font-bold uppercase tracking-wider w-max">
               <span className="w-2 h-2 rounded-full bg-[#1D4ED8] animate-pulse" />
-              [ WHY WORK WITH NAGARAJAN ]
+              Core Engineering Values
             </div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-[#111111] leading-tight">
-              Engineering web applications built to scale.
+              Why Work With Nagarajan
             </h2>
           </div>
           <p className="text-sm sm:text-base text-[#111111]/70 max-w-md leading-relaxed font-normal">
-            Proven engineering standards, pragmatic architectural decisions, and clean modern execution that drives business growth.
+            Proven engineering standards across frontend interfaces and backend architectures, delivering complete web applications engineered to scale.
           </p>
         </div>
 
@@ -59,7 +59,7 @@ export default function WhyChooseUs() {
           {differentiators.map((diff, idx) => {
             const Icon = diff.icon;
             return (
-              <motion.div
+              <motion.article
                 key={diff.title}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -86,7 +86,7 @@ export default function WhyChooseUs() {
                     </div>
                   </div>
 
-                  {/* Title */}
+                  {/* Title (H3 for individual cards) */}
                   <h3 className="text-xl font-bold text-[#111111] group-hover:text-[#1D4ED8] transition-colors duration-300 leading-snug mb-3">
                     {diff.title}
                   </h3>
@@ -99,7 +99,7 @@ export default function WhyChooseUs() {
 
                 {/* Bottom Interactive Accent Bar */}
                 <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#1D4ED8] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              </motion.div>
+              </motion.article>
             );
           })}
         </div>

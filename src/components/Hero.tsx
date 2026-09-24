@@ -5,29 +5,25 @@ import Link from "next/link";
 import GlyphPortal from "@/components/ui/glyph-portal";
 import {
   Sparkles,
-  CornerDownRight,
   CheckCircle2,
   Loader2,
   FileDown,
-  MoveDown
+  Layers,
+  Server,
+  Layout,
+  Database
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const previewAvatars = [
-  { id: "01", src: "/hero-avatar-1.webp", alt: "Creative Developer" },
-  { id: "02", src: "/hero-avatar-2.webp", alt: "Full Stack Engineer" },
-  { id: "03", src: "/hero-avatar-3.webp", alt: "Digital Architect" },
-];
-
 const skillPills = [
-  "Product Design",
-  "UI/UX Design",
-  "Web Development",
-  "Full Stack Dev",
-  "Next.js & React",
-  "Brand Identity",
-  "Motion Graphics",
-  "Design Systems",
+  "Full Stack Development",
+  "Frontend Development",
+  "Backend Development",
+  "React.js & Next.js",
+  "Node.js & Express",
+  "TypeScript",
+  "REST & GraphQL APIs",
+  "PostgreSQL & MongoDB",
 ];
 
 const marqueePills = [...skillPills, ...skillPills, ...skillPills];
@@ -36,14 +32,8 @@ const family = '"Montserrat", sans-serif';
 
 export default function Hero() {
   const [fontReady, setFontReady] = useState<string>('"Montserrat", sans-serif');
-  const [activeAvatarIndex, setActiveAvatarIndex] = useState(0);
   const [downloadState, setDownloadState] = useState<"idle" | "downloading" | "completed">("idle");
   const [progress, setProgress] = useState<number>(0);
-
-  const handleNextAvatar = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    setActiveAvatarIndex((prev) => (prev + 1) % previewAvatars.length);
-  };
 
   const handleDownloadCV = () => {
     if (downloadState !== "idle") return;
@@ -86,8 +76,6 @@ export default function Hero() {
     }
   }, []);
 
-  const currentAvatar = previewAvatars[activeAvatarIndex];
-
   return (
     <div className="relative w-full bg-[#FFFFFF]">
       <style>{`
@@ -97,7 +85,7 @@ export default function Hero() {
         [data-hero-portal] [data-gp-pin] {
           background-image: 
             
-            url('/hero-bg.webp') !important;
+            url('/nagarajan-studio-portrait-hero-background.webp') !important;
           background-size: cover !important;
           background-position: center 30% !important;
           background-repeat: no-repeat !important;
@@ -186,11 +174,11 @@ export default function Hero() {
           front={
             <div className="absolute inset-0 w-full h-full pointer-events-none flex flex-col justify-between p-4 sm:p-8 md:p-12 lg:p-14 z-25">
 
-              {/* TOP ROW: Brand Statement (Left) + Portrait Preview Widget (Right) */}
+              {/* TOP ROW: Brand Statement */}
               <div className="w-full flex items-start justify-between pt-16 sm:pt-14 md:pt-10">
 
                 {/* Top Left: 4-square icon + statement */}
-                <div className="pointer-events-auto flex items-start gap-2.5 max-w-[190px] sm:max-w-xs select-none">
+                <div className="pointer-events-auto flex items-start gap-2.5 max-w-[200px] sm:max-w-xs select-none">
                   {/* 4-square icon matching screenshot */}
                   <div className="grid grid-cols-2 gap-1 w-3.5 h-3.5 sm:w-4 sm:h-4 mt-0.5 shrink-0">
                     <span className="w-1.5 h-1.5 bg-white rounded-[1px] shadow-sm" />
@@ -200,51 +188,14 @@ export default function Hero() {
                   </div>
 
                   <p className="text-[11px] sm:text-[13px] md:text-sm font-semibold leading-tight sm:leading-snug text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]">
-                    Helping Brands Build<br />
-                    Better Digital Experiences<br />
-                    Through Design.
+                    Full Stack Developer<br />
+                    Frontend &amp; Backend<br />
+                    Web Applications.
                   </p>
-                </div>
-
-                {/* Top Right: Interactive Preview Widget with Thumbnail + Side Arrow Button + 01/03 */}
-                <div className="pointer-events-auto flex flex-col items-center gap-1 select-none">
-                  <div className="flex items-center bg-[#1c120c]/70 backdrop-blur-md p-1 sm:p-1.5 rounded-2xl border border-white/20 shadow-2xl shadow-orange-950/40">
-                    {/* Thumbnail Image */}
-                    <div className="relative w-14 h-14 sm:w-20 sm:h-20 rounded-xl overflow-hidden bg-black/60 border border-white/10">
-                      <AnimatePresence mode="wait">
-                        <motion.img
-                          key={currentAvatar.id}
-                          src={currentAvatar.src}
-                          alt={currentAvatar.alt}
-                          initial={{ opacity: 0, scale: 1.1 }}
-                          animate={{ opacity: 1, scale: 1 }}
-                          exit={{ opacity: 0, scale: 0.95 }}
-                          transition={{ duration: 0.3 }}
-                          className="w-full h-full object-cover"
-                        />
-                      </AnimatePresence>
-                    </div>
-
-                    {/* Side panel button with return arrow */}
-                    <button
-                      type="button"
-                      onClick={handleNextAvatar}
-                      className="group/btn w-6 sm:w-7 h-14 sm:h-20 flex items-center justify-center bg-[#8f3622]/80 hover:bg-[#a63f28] active:scale-95 text-white rounded-r-xl transition-all ml-1 sm:ml-1.5 cursor-pointer"
-                      title="Next portrait preview"
-                      aria-label="Next preview"
-                    >
-                      <CornerDownRight className="w-3.5 h-3.5 text-white group-hover/btn:translate-x-0.5 group-hover/btn:translate-y-0.5 transition-transform" />
-                    </button>
-                  </div>
-
-                  {/* Counter: 01/03 */}
-                  <span className="text-[10px] sm:text-xs font-mono font-bold tracking-widest text-white/90 drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]">
-                    {currentAvatar.id}/03
-                  </span>
                 </div>
               </div>
 
-              {/* CENTER: Trademark Registered Badge symbol aligned with PORTVIO */}
+              {/* CENTER: Trademark Registered Badge symbol aligned with NAGARAJAN */}
               <div className="absolute top-[46%] left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none select-none text-center">
                 <div className="relative inline-block">
                   <span className="opacity-0 text-7xl sm:text-8xl md:text-9xl font-black">
@@ -256,13 +207,16 @@ export default function Hero() {
                 </div>
               </div>
 
-              {/* BOTTOM ROW: Partner bio statement (Left) + Skills Pills row (Right) */}
+              {/* BOTTOM ROW: Primary H1 & Capabilities Statement (Left) + Skills Pills row (Right) */}
               <div className="w-full flex flex-col md:flex-row md:items-end justify-between gap-4 sm:gap-6 pb-4 sm:pb-8">
 
-                {/* Bottom Left: Bio statement */}
-                <div className="pointer-events-auto max-w-[290px] sm:max-w-md select-none">
-                  <p className="text-xs sm:text-sm md:text-[15px] font-semibold text-white leading-relaxed drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
-                    We partner with brands to create digital design that drives conversion and commands attention.
+                {/* Bottom Left: Primary Semantic H1 & Supporting Text */}
+                <div className="pointer-events-auto max-w-[320px] sm:max-w-lg select-none flex flex-col gap-1.5">
+                  <h1 className="text-sm sm:text-base md:text-lg font-bold text-white leading-snug drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                    Nagarajan — Full Stack Developer
+                  </h1>
+                  <p className="text-[11px] sm:text-xs md:text-[13px] font-medium text-white/90 leading-relaxed drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                    Full Stack Developer specializing in modern frontend and backend engineering. I build responsive user interfaces, scalable APIs and complete web applications using React.js, Next.js, Node.js and TypeScript.
                   </p>
                 </div>
 
@@ -281,16 +235,7 @@ export default function Hero() {
                 </div>
               </div>
 
-              {/* Portfolio badge at very bottom right (desktop only to prevent mobile clutter) */}
-              <div className="hidden sm:block absolute bottom-2.5 right-4 sm:right-8 pointer-events-auto select-none">
-                <a
-                  href="#contact"
-                  className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-white text-black text-[11px] font-bold shadow-md hover:bg-white/90 hover:scale-105 transition-all"
-                >
-                  <Sparkles className="w-3 h-3 text-[#ff5500]" />
-                  <span>Nagarajan Portfolio</span>
-                </a>
-              </div>
+             
             </div>
           }
         >
@@ -317,12 +262,12 @@ export default function Hero() {
 
                   {/* Bottom Text */}
                   <div className="text-lg sm:text-2xl font-bold tracking-tight text-white/95 leading-tight">
-                    Years of Experience
+                    Years of Full-Stack Experience
                   </div>
                 </div>
               </div>
 
-              {/* Right Column: About Me Details, Stats & CTA */}
+              {/* Right Column: About Me Details, Engineering Pillars & CTA */}
               <div className="relative flex-1 flex flex-col justify-center gap-4 sm:gap-6">
                 {/* Ghost Watermark Background Text: About Me */}
                 <div className="absolute -top-6 sm:-top-8 left-16 sm:left-28 text-5xl sm:text-7xl md:text-8xl font-black text-slate-900/[0.04] select-none pointer-events-none tracking-tight leading-none -z-0">
@@ -332,7 +277,7 @@ export default function Hero() {
                 {/* Subtitle with Dash: — About Me */}
                 <div className="relative z-10 flex items-center gap-2.5 text-[#1D4ED8] text-sm sm:text-base font-bold tracking-wide">
                   <span className="w-5 h-[2px] bg-[#1D4ED8] rounded-full" />
-                  <span>About Me</span>
+                  <span className="font-mono uppercase text-xs sm:text-sm font-bold tracking-wider">About Me</span>
                 </div>
 
                 {/* Main Heading: Who is Nagarajan? */}
@@ -343,10 +288,46 @@ export default function Hero() {
                   </span>
                 </h2>
 
-                {/* Bio Description */}
-                <p className="relative z-10 text-slate-600 text-sm sm:text-base leading-relaxed max-w-xl font-normal">
-                  Full Stack Web Developer specializing in architecting modern web applications, scalable backend APIs, cloud architectures, and high-performance user interfaces with Next.js, TypeScript, and Node.js.
+                {/* Primary About Bio Description */}
+                <p className="relative z-10 text-slate-700 text-sm sm:text-base leading-relaxed max-w-xl font-normal">
+                  Nagarajan is a Full Stack Developer experienced in building modern frontend interfaces, scalable backend systems and complete web applications. His work spans React.js, Next.js, TypeScript, Node.js, REST APIs, databases and cloud deployment.
                 </p>
+
+                {/* Core Engineering Pillars Breakdown */}
+                <div className="relative z-10 grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+                  {/* Frontend Pillar */}
+                  <div className="p-3 rounded-2xl bg-[#F8FAFC] border border-black/5 flex flex-col gap-1">
+                    <div className="flex items-center gap-1.5 text-xs font-bold text-[#1D4ED8] uppercase tracking-wider font-mono">
+                      <Layout className="w-3.5 h-3.5 text-[#1D4ED8]" />
+                      <span>Frontend</span>
+                    </div>
+                    <p className="text-xs text-slate-600 leading-snug">
+                      React.js, Next.js, TypeScript, JavaScript, HTML5, CSS3 &amp; Tailwind CSS
+                    </p>
+                  </div>
+
+                  {/* Backend Pillar */}
+                  <div className="p-3 rounded-2xl bg-[#F8FAFC] border border-black/5 flex flex-col gap-1">
+                    <div className="flex items-center gap-1.5 text-xs font-bold text-[#1D4ED8] uppercase tracking-wider font-mono">
+                      <Server className="w-3.5 h-3.5 text-[#1D4ED8]" />
+                      <span>Backend</span>
+                    </div>
+                    <p className="text-xs text-slate-600 leading-snug">
+                      Node.js, Express.js, REST APIs, GraphQL, Auth &amp; API Integrations
+                    </p>
+                  </div>
+
+                  {/* Database Pillar */}
+                  <div className="p-3 rounded-2xl bg-[#F8FAFC] border border-black/5 flex flex-col gap-1">
+                    <div className="flex items-center gap-1.5 text-xs font-bold text-[#1D4ED8] uppercase tracking-wider font-mono">
+                      <Database className="w-3.5 h-3.5 text-[#1D4ED8]" />
+                      <span>Database</span>
+                    </div>
+                    <p className="text-xs text-slate-600 leading-snug">
+                      PostgreSQL, MongoDB, MySQL, Supabase &amp; Redis Caching
+                    </p>
+                  </div>
+                </div>
 
                 {/* Two Stats Side-by-Side */}
                 <div className="relative z-10 flex items-center gap-10 sm:gap-16 pt-1">
@@ -355,7 +336,7 @@ export default function Hero() {
                       30+
                     </span>
                     <span className="text-xs sm:text-sm font-semibold text-slate-500">
-                      Projects Completed
+                      Full-Stack Projects
                     </span>
                   </div>
 
@@ -364,7 +345,7 @@ export default function Hero() {
                       15+
                     </span>
                     <span className="text-xs sm:text-sm font-semibold text-slate-500">
-                      Tech Stacks Covered
+                      Frontend &amp; Backend Stacks
                     </span>
                   </div>
                 </div>

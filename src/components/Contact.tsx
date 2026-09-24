@@ -48,7 +48,7 @@ export default function Contact() {
             className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#1D4ED8]/10 text-[#1D4ED8] text-xs font-mono font-bold uppercase tracking-wider border border-[#1D4ED8]/20 shadow-sm"
           >
             <span className="w-2 h-2 rounded-full bg-[#1D4ED8] animate-pulse" />
-            [ DIRECT COLLABORATION &amp; DISCOVERY ]
+            Contact
           </motion.div>
 
           <motion.h2

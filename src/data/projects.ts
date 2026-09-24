@@ -4,6 +4,10 @@ export interface Project {
   title: string;
   tagline: string;
   category: string;
+  projectType: string;
+  frontendTech: string[];
+  backendTech: string[];
+  database: string;
   year: string;
   client: string;
   role: string;
@@ -14,6 +18,7 @@ export interface Project {
   solution: string;
   impact: string;
   image: string;
+  imageAlt: string;
   gallery: string[];
   featured: boolean;
   link?: string;
@@ -26,19 +31,30 @@ export const projectsData: Project[] = [
     slug: "wheels-turbo-cafe",
     title: "The Wheels Turbo Cafe",
     tagline: "High-octane racing & Ajith Kumar themed cafe experience with digital interactive menu and table reservations.",
-    category: "Hospitality & Experience Web App",
+    category: "Full Stack Hospitality Web App",
+    projectType: "Full Stack Web Application",
+    frontendTech: ["Next.js", "React.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    backendTech: ["Node.js", "REST APIs", "Express.js"],
+    database: "PostgreSQL",
     year: "2026",
     client: "The Wheels Turbo Cafe",
-    role: "Lead Full Stack & UI/UX Developer",
-    deliverables: ["Next.js & TypeScript", "Interactive Digital Menu", "Booking & Reservation Engine", "Tailwind CSS", "Framer Motion Animations"],
-    description: "Coimbatore's premier racing and Ajith Kumar themed cafe web application in RS Puram, engineered for immersive digital storytelling, online menu browsing, and event reservations.",
+    role: "Full Stack Developer",
+    deliverables: [
+      "Next.js & TypeScript Frontend",
+      "Interactive Digital Menu Engine",
+      "Table Booking & Reservation REST APIs",
+      "PostgreSQL Database Integration",
+      "Responsive UI & Mobile Optimization"
+    ],
+    description: "Full-stack web application built with Next.js and TypeScript frontend, Node.js REST APIs and PostgreSQL database for immersive digital menu browsing and real-time table reservations.",
     overview: "The Wheels Turbo Cafe required an electrifying web portal that embodies motorsport energy while driving real table bookings, online inquiries, and cafe visits.",
     challenge: "Capturing the fast-paced racing aesthetic with buttery-smooth animations without sacrificing mobile loading speed or accessibility for diner guests.",
     solution: "Built a responsive Next.js web application with dark-mode motorsport gradients, interactive menu categories, fast load times, and frictionless booking call-to-actions.",
     impact: "+210% Digital menu engagement, 45,000+ monthly page views, and 4.9/5 guest rating.",
-    image: "/projects/wheels-turbo-cafe.webp",
+    image: "/projects/the-wheels-turbo-cafe-full-stack-app.webp",
+    imageAlt: "The Wheels Turbo Cafe Full Stack Web Application by Nagarajan",
     gallery: [
-      "/projects/wheels-turbo-cafe.webp"
+      "/projects/the-wheels-turbo-cafe-full-stack-app.webp"
     ],
     featured: true,
     link: "https://wheelsturbocafe.com",
@@ -53,19 +69,30 @@ export const projectsData: Project[] = [
     slug: "sarvilinga-builders",
     title: "Sarvilinga Builders & Structures",
     tagline: "Turnkey structural engineering, luxury construction portal, and interactive proposal estimator.",
-    category: "Architecture & Structural Engineering Portal",
+    category: "Full Stack Engineering & Construction Portal",
+    projectType: "Full Stack Web Application",
+    frontendTech: ["Next.js App Router", "React.js", "TypeScript", "Tailwind CSS"],
+    backendTech: ["Node.js", "REST APIs", "Email & Notification Services"],
+    database: "PostgreSQL & Supabase",
     year: "2026",
     client: "Sarvilinga Builders & Structures",
-    role: "Full Stack Web Architect",
-    deliverables: ["Next.js App Router", "Bilingual Support (EN/TA)", "Interactive Proposal Engine", "Live Consultation Booking", "Tailwind CSS"],
-    description: "A digital showcase for luxury construction and turnkey engineering projects across Coimbatore and Tamil Nadu, featuring architectural portfolios and quick proposal requests.",
+    role: "Full Stack Developer",
+    deliverables: [
+      "Next.js App Router & Bilingual UI (EN/TA)",
+      "Interactive Construction Estimator",
+      "Consultation Booking API Endpoints",
+      "Supabase & PostgreSQL Data Layer",
+      "Lead Capture & WhatsApp Notification Automation"
+    ],
+    description: "Full-stack construction engineering web application engineered with Next.js and TypeScript frontend, Node.js backend integration and PostgreSQL database for project portfolios and live estimation.",
     overview: "Sarvilinga required a high-trust digital platform to display extensive structural achievements, industrial warehouses, and luxury villas to prospective high-ticket clients.",
     challenge: "Organizing multi-tiered engineering portfolios, live video showcases, and multilingual Tamil/English content into an intuitive, razor-sharp user experience.",
     solution: "Architected a Next.js application with interactive floating 3D hero concepts, dynamic proposal generators, client testimonials, and WhatsApp direct consultation triggers.",
     impact: "+175% Structural consultation inquiries and 3.8x increase in qualified commercial leads.",
-    image: "/projects/sarvilinga-builders.webp",
+    image: "/projects/sarvilinga-builders-full-stack-portal.webp",
+    imageAlt: "Sarvilinga Builders Full Stack Engineering Web Application by Nagarajan",
     gallery: [
-      "/projects/sarvilinga-builders.webp"
+      "/projects/sarvilinga-builders-full-stack-portal.webp"
     ],
     featured: true,
     link: "https://sarvilingabuilders.com",
@@ -80,19 +107,30 @@ export const projectsData: Project[] = [
     slug: "niyozenix-dental",
     title: "Niyozenix Dental & Orthodontics",
     tagline: "Premier dental & orthodontic digital healthcare platform with instant appointment scheduling.",
-    category: "Healthcare & Dental Web Application",
+    category: "Full Stack Healthcare Platform",
+    projectType: "Full Stack Web Application",
+    frontendTech: ["Next.js", "React.js", "TypeScript", "Tailwind CSS"],
+    backendTech: ["Node.js", "REST APIs", "CRM Integrations"],
+    database: "MongoDB",
     year: "2026",
     client: "Niyozenix Dental & Orthodontics",
-    role: "Lead Full Stack Developer",
-    deliverables: ["Next.js & React", "Online Appointment Booking", "Orthodontic Treatment Showcase", "Patient CRM Integration", "Tailwind CSS"],
-    description: "A patient-centric healthcare platform for a top orthodontic clinic in Pondicherry, providing seamless appointment booking, doctor schedules, and verified patient reviews.",
+    role: "Full Stack Developer",
+    deliverables: [
+      "Responsive Next.js & React Frontend",
+      "Online Patient Appointment Scheduling",
+      "RESTful API & Patient Inquiry Management",
+      "MongoDB Database Schema Design",
+      "Mobile-First Patient Booking Flow"
+    ],
+    description: "Full-stack healthcare web application built with React and Next.js frontend, Node.js REST API endpoints, and MongoDB database for orthodontic scheduling and patient services.",
     overview: "Niyozenix needed a clean, inviting web experience to build patient trust for specialized treatments like Invisalign, Vivera, and 3M Orthodontics.",
     challenge: "Creating an accessible, mobile-first appointment booking flow that reduces patient friction and simplifies clinic staff workflow.",
     solution: "Engineered a calming, modern UI with 1-click booking, before-and-after visual sliders, direct phone calling triggers, and certified partner validations.",
     impact: "+240% Direct online appointment bookings and 94% positive patient feedback score.",
-    image: "/projects/niyozenix-dental.webp",
+    image: "/projects/niyozenix-dental-full-stack-healthcare.webp",
+    imageAlt: "Niyozenix Dental Full Stack Healthcare Web Application by Nagarajan",
     gallery: [
-      "/projects/niyozenix-dental.webp"
+      "/projects/niyozenix-dental-full-stack-healthcare.webp"
     ],
     featured: true,
     link: "https://niyozenix.com",
@@ -105,22 +143,32 @@ export const projectsData: Project[] = [
   {
     id: "trucker-path",
     slug: "trucker-path",
-    title: "Trucker Path Website",
+    title: "Trucker Path Logistics Platform",
     tagline: "High-converting logistics platform, driver portal, dispatch dashboards & fleet management web application.",
-    category: "Web Design • Landing Page",
+    category: "Full Stack Logistics Web Application",
+    projectType: "Full Stack Web Application",
+    frontendTech: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    backendTech: ["Node.js", "REST APIs", "Microservices"],
+    database: "PostgreSQL & Redis",
     year: "2026",
     client: "Trucker Path Inc.",
-    role: "Lead UI/UX & Full-Stack Architect",
-    deliverables: ["Next.js & TypeScript", "Figma Design System", "Framer Motion", "Tailwind CSS", "Interactive Fleet Maps"],
-    description: "A flagship logistics and freight management ecosystem built for over 1M+ active truck drivers, fleet operators, and dispatchers across North America.",
+    role: "Full Stack Developer",
+    deliverables: [
+      "Next.js & TypeScript UI Architecture",
+      "Interactive Fleet Map & Logistics Displays",
+      "Node.js High-Throughput REST APIs",
+      "PostgreSQL & Redis Cache Layer",
+      "Conversion-Optimized Landing Experience"
+    ],
+    description: "Full-stack logistics web platform featuring Next.js and TypeScript frontend interfaces, Node.js microservices, and PostgreSQL database with Redis caching for fleet operations.",
     overview: "Trucker Path required an immersive, high-converting digital experience that clearly communicates their smart freight solutions, live dispatch tooling, and automated fleet dashboards.",
     challenge: "Organizing dense logistics features, dispatch systems, and community resources into an intuitive, razor-sharp landing page that maximizes driver and enterprise conversion.",
     solution: "Crafted a modular design system, responsive 3D interactive preview components, streamlined navigation architecture, and high-performance Next.js landing experiences.",
     impact: "+180% Demo request conversion, 4.9/5 user satisfaction across web fleets.",
     image: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=1600&auto=format&fit=crop",
+    imageAlt: "Trucker Path Logistics Full Stack Web Application by Nagarajan",
     gallery: [
-      "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=1600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1600&auto=format&fit=crop"
+      "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=1600&auto=format&fit=crop"
     ],
     featured: true,
     link: "https://truckerpath.com",
@@ -133,19 +181,30 @@ export const projectsData: Project[] = [
   {
     id: "zenith",
     slug: "zenith",
-    title: "Zenith Cloud SaaS",
+    title: "Zenith Cloud SaaS Workspace",
     tagline: "Real-time collaborative developer workspace & workflow management platform.",
-    category: "Full Stack SaaS & Cloud Architecture",
+    category: "Full Stack Cloud SaaS Platform",
+    projectType: "Full Stack Web Application",
+    frontendTech: ["Next.js App Router", "React.js", "TypeScript", "Tailwind CSS"],
+    backendTech: ["Node.js", "WebSockets", "REST APIs", "Express.js"],
+    database: "PostgreSQL & Prisma ORM & Redis",
     year: "2026",
     client: "Zenith Technologies",
-    role: "Lead Full Stack Engineer",
-    deliverables: ["Next.js App Router", "Node.js Microservices", "PostgreSQL & Prisma", "WebSocket Engine", "Docker & CI/CD"],
-    description: "Zenith is an enterprise workflow platform built with Next.js, Node.js, and WebSockets enabling real-time collaboration across 250,000+ active engineers and developers.",
+    role: "Full Stack Developer",
+    deliverables: [
+      "Next.js App Router & Server Components",
+      "Node.js WebSocket Real-Time Engine",
+      "PostgreSQL Database & Prisma ORM",
+      "Redis Pub/Sub Pipeline",
+      "Dockerized CI/CD Deployment"
+    ],
+    description: "Full-stack SaaS web application built with Next.js and TypeScript frontend, Node.js WebSocket engine, and PostgreSQL database with Prisma ORM for real-time collaboration.",
     overview: "Zenith needed a complete architectural overhaul from a legacy monolith to a lightning-fast full stack application capable of handling high concurrency, live state syncing, and sub-100ms API responses.",
     challenge: "Handling tens of thousands of concurrent WebSocket connections, complex state reconciliation across distributed teams, and instant database querying without memory spikes.",
     solution: "Engineered a scalable full-stack system using Next.js Server Components, Redis Pub/Sub for live messaging, PostgreSQL with connection pooling, and optimized TypeScript APIs.",
     impact: "+140% Daily active throughput, reduced server response latency from 450ms to 42ms.",
     image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1600&auto=format&fit=crop",
+    imageAlt: "Zenith Cloud SaaS Full Stack Web Application by Nagarajan",
     gallery: [
       "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1600&auto=format&fit=crop"
     ],

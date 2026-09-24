@@ -11,100 +11,72 @@ export interface Service {
 
 export const servicesData: Service[] = [
   {
-    id: "full-stack-web",
+    id: "frontend-dev",
     number: "01",
-    title: "Full-Stack Web Development",
-    description: "Building end-to-end, high-performance web applications from database architecture to interactive UI.",
+    title: "Frontend Development",
+    description: "Responsive, high-performance frontend applications using React.js, Next.js, TypeScript and modern UI technologies.",
     iconName: "Monitor",
-    tagline: "Building scalable, production-ready web applications with modern tech stacks.",
+    tagline: "Building responsive, accessible and high-performance frontend experiences with React.js, Next.js and TypeScript.",
     deliverables: [
-      "Next.js App Router Architecture",
-      "React & TypeScript Engineering",
-      "Tailwind CSS & Framer Motion UI",
-      "Server-Side Rendering (SSR & SSG)"
+      "React.js & Next.js App Router Architecture",
+      "TypeScript & Component-Driven UI Engineering",
+      "Tailwind CSS, Responsive & Accessible Layouts",
+      "Core Web Vitals & Performance Optimization"
     ]
   },
   {
-    id: "backend-api",
+    id: "backend-dev",
     number: "02",
-    title: "Backend & API Architecture",
-    description: "Designing robust, secure, and scalable REST and GraphQL APIs with microservices.",
+    title: "Backend Development",
+    description: "Scalable Node.js backend systems, REST APIs, authentication, database integrations and third-party APIs.",
     iconName: "Share2",
-    tagline: "High-throughput server infrastructure built for speed, security, and reliability.",
+    tagline: "Designing scalable backend systems and APIs using Node.js, REST, databases and modern cloud technologies.",
     deliverables: [
-      "Node.js & Express / NestJS Backends",
-      "RESTful & GraphQL API Systems",
-      "JWT & OAuth Authentication / RBAC",
-      "WebSocket Real-Time Pipelines"
+      "Node.js & Express.js Backend Architecture",
+      "RESTful & GraphQL API Development",
+      "JWT & OAuth Authentication & Authorization",
+      "PostgreSQL, MongoDB, MySQL & Supabase Integration"
     ]
   },
   {
-    id: "database-cloud",
+    id: "full-stack-web",
     number: "03",
-    title: "Database Design & Optimization",
-    description: "Architecting relational and NoSQL databases with optimized indexing, caching, and migrations.",
+    title: "Full Stack Web Development",
+    description: "Complete web applications combining frontend interfaces, backend APIs, databases and deployment.",
     iconName: "Box",
-    tagline: "High-concurrency data layers engineered for sub-millisecond query performance.",
+    tagline: "From frontend interfaces to backend APIs and databases, developing complete full-stack web applications with modern JavaScript technologies.",
     deliverables: [
-      "PostgreSQL, MySQL & MongoDB",
-      "Prisma & Drizzle ORM Setup",
-      "Redis Caching & Queue Management",
-      "Database Schema & Zero-Downtime Migrations"
+      "End-to-End Web Application Architecture",
+      "Unified TypeScript Frontend & Backend Workflows",
+      "Database Schema Design, Migrations & Caching (Redis)",
+      "Automated CI/CD, Docker & Cloud Deployment"
     ]
   },
   {
-    id: "saas-mvp",
+    id: "web-app-engineering",
     number: "04",
-    title: "SaaS Product Engineering",
-    description: "Translating ideas into revenue-generating SaaS MVPs with payment processing and user auth.",
-    iconName: "Smartphone",
-    tagline: "Rapidly taking software products from concept to market-ready reality.",
-    deliverables: [
-      "Stripe / LemonSqueezy Billing Systems",
-      "Multi-Tenant Architecture",
-      "User Onboarding & Analytics Tracking",
-      "Admin Control Dashboards"
-    ]
-  },
-  {
-    id: "devops-ci-cd",
-    number: "05",
-    title: "DevOps & Cloud Deployment",
-    description: "Automating deployments with Docker containers, CI/CD workflows, and serverless infrastructure.",
+    title: "Web Application Engineering",
+    description: "Production-ready applications designed for performance, scalability and maintainability.",
     iconName: "Award",
-    tagline: "Automated pipelines ensuring continuous integration and 99.99% uptime.",
+    tagline: "Production-grade engineering delivering security, modularity, and high-concurrency performance.",
     deliverables: [
-      "Docker & Containerization",
-      "GitHub Actions CI/CD Pipelines",
-      "Vercel, AWS & DigitalOcean Hosting",
-      "Security Audits & SSL Governance"
-    ]
-  },
-  {
-    id: "performance-seo",
-    number: "06",
-    title: "Performance & SEO Optimization",
-    description: "Maxing out Core Web Vitals, achieving 100/100 Lighthouse scores, and building technical SEO foundation.",
-    iconName: "PenTool",
-    tagline: "Sub-second load times that rank at the top of Google and convert visitors.",
-    deliverables: [
-      "Core Web Vitals (LCP, INP, CLS) Tuning",
-      "Automated OpenGraph & Metadata",
-      "Bundle Size & Image Optimization",
-      "Lighthouse 100/100 Auditing"
+      "Modular, Maintainable Clean Code Architectures",
+      "Security Best Practices & Data Validation",
+      "Real-Time Data Pipelines & WebSockets",
+      "Continuous Monitoring, SEO & Scalability"
     ]
   }
 ];
 
 export const serviceCapabilities: string[] = [
-  "Next.js & React",
-  "Node.js & Express",
-  "TypeScript",
-  "PostgreSQL & MySQL",
-  "Tailwind CSS",
+  "React.js & Next.js",
+  "Node.js & Express.js",
+  "TypeScript & JavaScript",
+  "Full Stack Web Development",
   "REST & GraphQL APIs",
-  "Prisma / Drizzle ORM",
+  "PostgreSQL & MongoDB",
+  "MySQL & Supabase",
+  "Tailwind CSS",
   "Docker & CI/CD",
-  "Redis Caching",
-  "Full-Stack Architecture"
+  "Redis & Performance Optimization"
 ];

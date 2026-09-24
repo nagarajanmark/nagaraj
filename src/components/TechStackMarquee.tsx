@@ -9,32 +9,30 @@ interface TechItem {
 }
 
 const row1Techs: TechItem[] = [
-  { name: "React", category: "Frontend Library", icon: "/tectstack/React.svg" },
+  { name: "React.js", category: "Frontend UI Library", icon: "/tectstack/React.svg" },
   { name: "Next.js", category: "Full-Stack Framework", icon: "/tectstack/Next.js.svg" },
-  { name: "TypeScript", category: "Type-Safe JS", icon: "/tectstack/TypeScript.svg" },
-  { name: "JavaScript", category: "Core Language", icon: "/tectstack/JavaScript.svg" },
-  { name: "HTML5", category: "Markup Standard", icon: "/tectstack/HTML5.svg" },
-  { name: "CSS3", category: "Modern Styling", icon: "/tectstack/CSS3.svg" },
-  { name: "Tailwind CSS", category: "Utility-First CSS", icon: "/tectstack/Tailwind-CSS.svg" },
-  { name: "Sass", category: "CSS Preprocessor", icon: "/tectstack/Sass.svg" },
-  { name: "Bootstrap", category: "UI Framework", icon: "/tectstack/Bootstrap.svg" },
-  { name: "React Bootstrap", category: "React UI Components", icon: "/tectstack/React-Bootstrap.svg" },
-  { name: "Material UI", category: "Component System", icon: "/tectstack/Material-UI.svg" },
-  { name: "AngularJS", category: "Frontend Framework", icon: "/tectstack/AngularJS.svg" },
+  { name: "TypeScript", category: "Type-Safe Frontend & Backend", icon: "/tectstack/TypeScript.svg" },
+  { name: "JavaScript", category: "Core Web Language", icon: "/tectstack/JavaScript.svg" },
+  { name: "HTML5", category: "Semantic Markup", icon: "/tectstack/HTML5.svg" },
+  { name: "CSS3", category: "Modern Styling & Layouts", icon: "/tectstack/CSS3.svg" },
+  { name: "Tailwind CSS", category: "Utility-First CSS Framework", icon: "/tectstack/Tailwind-CSS.svg" },
+  { name: "Three.js", category: "3D & Interactive Graphics", icon: "/tectstack/Three.js.svg" },
+  { name: "Figma", category: "UI/UX & Design Systems", icon: "/tectstack/Figma.svg" },
 ];
 
 const row2Techs: TechItem[] = [
-  { name: "Node.js", category: "Runtime Environment", icon: "/tectstack/Node.js.svg" },
-  { name: "Python", category: "Backend & Scripting", icon: "/tectstack/Python.svg" },
-  { name: "Django", category: "Python Web Framework", icon: "/tectstack/Django.svg" },
-  { name: "PHP", category: "Server-Side Scripting", icon: "/tectstack/PHP.svg" },
-  { name: "MongoDB", category: "NoSQL Database", icon: "/tectstack/MongoDB.svg" },
-  { name: "MySQL", category: "Relational Database", icon: "/tectstack/MySQL.svg" },
-  { name: "Three.js", category: "3D Graphics & WebGL", icon: "/tectstack/Three.js.svg" },
-  { name: "Flutter", category: "Cross-Platform Mobile", icon: "/tectstack/Flutter.svg" },
-  { name: "Kotlin", category: "Native Android & JVM", icon: "/tectstack/Kotlin.svg" },
-  { name: "Figma", category: "UI/UX & Prototyping", icon: "/tectstack/Figma.svg" },
+  { name: "Node.js", category: "Backend Runtime Environment", icon: "/tectstack/Node.js.svg" },
+  { name: "Express.js", category: "Backend REST API Framework", icon: "/tectstack/Express.svg" },
+  { name: "GraphQL", category: "API Query & Schema Language", icon: "/tectstack/GraphQL.svg" },
+  { name: "PostgreSQL", category: "Relational Database", icon: "/tectstack/PostgresSQL.svg" },
+  { name: "MongoDB", category: "Document NoSQL Database", icon: "/tectstack/MongoDB.svg" },
+  { name: "MySQL", category: "Relational SQL Database", icon: "/tectstack/MySQL.svg" },
+  { name: "Redis", category: "In-Memory Cache & Pub/Sub", icon: "/tectstack/Redis.svg" },
+  { name: "Docker", category: "Containerization & DevOps", icon: "/tectstack/Docker.svg" },
+  { name: "AWS", category: "Cloud Infrastructure", icon: "/tectstack/AWS.svg" },
+  { name: "Vercel", category: "Frontend & Serverless Edge", icon: "/tectstack/Vercel.svg" },
   { name: "Git", category: "Version Control", icon: "/tectstack/Git.svg" },
+  { name: "GitHub Actions", category: "Automated CI/CD Pipelines", icon: "/tectstack/GitHub-Actions.svg" },
 ];
 
 export default function TechStackMarquee() {
@@ -49,14 +47,14 @@ export default function TechStackMarquee() {
           <div>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#1D4ED8]/10 text-[#1D4ED8] text-xs font-mono font-bold uppercase tracking-wider mb-3">
               <span className="w-2 h-2 rounded-full bg-[#1D4ED8] animate-pulse" />
-              Technologies &amp; Frameworks
+              Full Stack Technologies
             </div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#111111] tracking-tight leading-tight">
-              Tech Stack &amp; Skills I Know
+              Frontend &amp; Backend Tech Stack
             </h2>
           </div>
           <p className="max-w-md text-sm sm:text-base text-[#111111]/70 leading-relaxed font-normal">
-            A battle-tested arsenal of modern programming languages, frontend libraries, backend frameworks, databases, and design tools I work with daily.
+            A production-proven technology stack spanning React.js and Next.js frontend interfaces, Node.js backend APIs, relational and NoSQL databases, and cloud DevOps.
           </p>
         </div>
       </div>
@@ -67,7 +65,7 @@ export default function TechStackMarquee() {
         <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-32 bg-gradient-to-r from-[#FFFFFF] via-[#FFFFFF]/80 to-transparent z-20 pointer-events-none" />
         <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-32 bg-gradient-to-l from-[#FFFFFF] via-[#FFFFFF]/80 to-transparent z-20 pointer-events-none" />
 
-        {/* Row 1: Moves Left */}
+        {/* Row 1: Frontend & UI Technologies (Moves Left) */}
         <div className="flex overflow-hidden">
           <div className="flex gap-4 sm:gap-6 animate-marquee whitespace-nowrap items-center py-2">
             {[...row1Techs, ...row1Techs, ...row1Techs].map((tech, idx) => (
@@ -78,7 +76,7 @@ export default function TechStackMarquee() {
                 <div className="relative w-9 h-9 sm:w-10 sm:h-10 flex-shrink-0 p-1.5 rounded-xl bg-[#F8FAFC] border border-[#111111]/5 group-hover:scale-110 group-hover:border-[#1D4ED8]/30 transition-transform duration-300">
                   <Image
                     src={tech.icon}
-                    alt={`${tech.name} logo`}
+                    alt={`${tech.name} Full Stack Web Development`}
                     fill
                     className="object-contain p-0.5"
                     sizes="40px"
@@ -97,7 +95,7 @@ export default function TechStackMarquee() {
           </div>
         </div>
 
-        {/* Row 2: Moves Right */}
+        {/* Row 2: Backend, Databases & DevOps (Moves Right) */}
         <div className="flex overflow-hidden">
           <div className="flex gap-4 sm:gap-6 animate-marquee-reverse whitespace-nowrap items-center py-2">
             {[...row2Techs, ...row2Techs, ...row2Techs].map((tech, idx) => (
@@ -108,7 +106,7 @@ export default function TechStackMarquee() {
                 <div className="relative w-9 h-9 sm:w-10 sm:h-10 flex-shrink-0 p-1.5 rounded-xl bg-[#F8FAFC] border border-[#111111]/5 group-hover:scale-110 group-hover:border-[#1D4ED8]/30 transition-transform duration-300">
                   <Image
                     src={tech.icon}
-                    alt={`${tech.name} logo`}
+                    alt={`${tech.name} Backend & Database Development`}
                     fill
                     className="object-contain p-0.5"
                     sizes="40px"
